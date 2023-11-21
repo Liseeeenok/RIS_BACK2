@@ -53,6 +53,17 @@ fields:
         oc.commentPosition: ''
         span: full
         type: richeditor
+    sectionAuthors:
+        label: Участники проекта
+        span: full
+        type: section
+    project_authors:
+        span: full
+        type: partial
+    sectionPublications:
+        label: Публикации по проекту
+        span: full
+        type: section
     publications:
         span: full
         type: partial

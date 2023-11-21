@@ -74,6 +74,7 @@ class CreatePublicationTables extends Migration
             $table->text('annotation')->nullable(); 
             $table->date('published_at')->nullable(); 
             $table->string('doi',100)->nullable();
+            $table->string('eid',255)->nullable();
             $table->boolean('is_to_print')->default(false);
             $table->boolean('is_special')->default(false)->comment('Специальный выпуск');
             $table->boolean('is_wos')->default(false);

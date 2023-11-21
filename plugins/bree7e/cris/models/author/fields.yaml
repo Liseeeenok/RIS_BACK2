@@ -60,6 +60,10 @@ tabs:
             span: full
             type: partial
             tab: Публикации
+        projects_author:
+            span: full
+            type: partial
+            tab: Проекты    
         generate_synonyms_button:
             span: left
             type: partial

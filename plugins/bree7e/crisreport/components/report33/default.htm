@@ -15,7 +15,7 @@
     </div>
     <div class="field">
         <label>Сотрудник</label>
-        <select name="author" class="ui search dropdown">
+        <select name="author" id="author" class="ui search dropdown">
             <option value="0">Выбор</option>
             {% for author in __SELF__.authors %}
             <option value="{{ author.id }}">{{ author.surname }} {{ author.name }} {{ author.middlename }}</option>
@@ -23,7 +23,7 @@
         </select>
     </div>
 
-    <div class="field">
+    <div class="field" style="margin-bottom: 10px;">
         <button type="submit" class="ui primary button" data-attach-loading>
             Сформировать
         </button>
@@ -66,7 +66,6 @@
     });
     author_id = 0;
     document.getElementById('author').addEventListener('change', async (e) => {
-        return;
         document.getElementById('get_docx_33').classList.add('disabled');
         document.getElementById('get_docx_activity').classList.add('disabled');
         document.getElementById('get_docx_award').classList.add('disabled');

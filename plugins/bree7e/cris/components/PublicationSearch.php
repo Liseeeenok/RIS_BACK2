@@ -5,6 +5,7 @@ use Bree7e\Cris\Models\Department;
 use Bree7e\Cris\Models\Project;
 use Bree7e\Cris\Models\Publication;
 use Bree7e\Cris\Models\PublicationType;
+use Bree7e\Cris\Models\ProjectsPublications;
 use Cms\Classes\ComponentBase;
 
 class PublicationSearch extends ComponentBase
@@ -115,10 +116,48 @@ class PublicationSearch extends ComponentBase
             $query = $query->ofAuthors([$author]);
         }
 
+        // Вывод номеров проектов у публикации
+        $projects_publications = ProjectsPublications::all();
+        $projects = Project::all();
+
+        $count_projects = 0;
+        for($i = 0; $i < count($projects_publications); $i++) {
+            while($count_projects < (count($projects)-1) && $projects[$count_projects]->id != $projects_publications[$i]->project_id) $count_projects += 1;
+
+            if($projects[$count_projects]->id == $projects_publications[$i]->project_id) {
+                $projects_publications[$i]->nioktr_number = $projects[$count_projects]->nioktr_number;
+                $projects_publications[$i]->project_number = $projects[$count_projects]->project_number;
+            }
+        }
+
+        $projects_publications = $projects_publications->sortBy('publication_id');
+        $projects_publications = $projects_publications->values()->all();
+        $publications = $query->get();
+
+        $count_publications = 0;
+        $count_projects_publications = 0;
+        $number_projects = [];
+        while($count_publications < (count($publications)-1)) {
+            if($projects_publications[$count_projects_publications]->publication_id == $publications[$count_publications]->id) {
+                if($projects_publications[$count_projects_publications]->nioktr_number)
+                    array_push($number_projects, $projects_publications[$count_projects_publications]->nioktr_number);
+                if(count($number_projects) > 1) 
+                    $number_projects[count($number_projects)-2] .= ", ";
+                $count_projects_publications += 1;
+            } elseif ($projects_publications[$count_projects_publications]->publication_id > $publications[$count_publications]->id) {
+                $publications[$count_publications]->number_projects = $number_projects;
+                $number_projects = [];
+                $count_publications += 1;
+            } else {
+                $count_projects_publications += 1;
+            }
+        }
+        // Вывод номеров проектов у публикации
+
         if ($sort_following == "increasing")
-            $publications = $query->get()->sortBy($sort_argument);
+            $publications = $publications->sortBy($sort_argument);
         else if ($sort_following == "decreasing")
-            $publications = $query->get()->sortByDesc($sort_argument);
+            $publications = $publications->sortByDesc($sort_argument);
 
         if ($publications->isEmpty()) {
             unset($this->page['publications']);
@@ -128,4 +167,3 @@ class PublicationSearch extends ComponentBase
 
     }
 }
-

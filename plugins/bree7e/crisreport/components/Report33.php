@@ -21,7 +21,7 @@ class Report33 extends ComponentBase
         $this->authors = Author::orderBy('surname')->get();
         //$this->authors = Author::ofScientificDepartments()->orderBy('surname')->get();
     }
-  
+
     public function onRenderReport()
     {
         $author = post('author');
@@ -69,6 +69,5 @@ class Report33 extends ComponentBase
             $this->page['publications'] = $publications;
             $this->page['author'] = $choosedAuthor;
         }
-    }
-        
+    } 
 }

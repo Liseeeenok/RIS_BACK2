@@ -28,4 +28,10 @@
 {% if showIndextion and publication.best_indexation != '-' %}
     ({{ publication.best_indexation }})
 {% endif %}
-    
+
+{% if publication.number_projects %}
+    Проекты: 
+{% endif %}
+{% for p in publication.number_projects %}
+    {{ p }}
+{% endfor %}

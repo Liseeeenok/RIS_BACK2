@@ -26,7 +26,7 @@ class Publication extends Model
     protected $guarded = [
         'id',
         'authors_count',
-        'added_by_rb_user_id'
+        'added_by_rb_user_id',
     ];
 
     /**
@@ -80,6 +80,10 @@ class Publication extends Model
             Author::class, 
             'key' => 'added_by_rb_user_id'
         ],
+        'addedBySpeaker' => [
+            Author::class,
+            'key' => 'speaker'
+        ],
     ];
     public $belongsToMany = [
         'projects' => [
@@ -92,7 +96,7 @@ class Publication extends Model
             'table' => 'bree7e_cris_authors_publications', // таблица многие-ко-многим
             'key' => 'publication_id', // The key parameter is the foreign key name of the model on which you are defining the relationship
             'otherKey' => 'rb_author_id' // Second foreign key name in the many-to-many table
-        ]    
+        ]
     ];
  
     public $morphTo = [];
@@ -183,6 +187,24 @@ class Publication extends Model
                 case 'Q5':
                     return 'Scopus Emerging Sources Citation Index';
                     break;                
+            }
+        }
+
+        if ($this->is_wl) {
+            if (!$this->quartile_wl) return 'Белый список';
+            switch ($this->quartile_wl) {
+                case 'УБС1':
+                    return 'Уровень белого списка 1';
+                    break;
+                case 'УБС2':
+                    return 'Уровень белого списка 2';
+                    break;
+                case 'УБС3':
+                    return 'Уровень белого списка 3';
+                    break;
+                case 'УБС4':
+                    return 'Уровень белого списка 4';
+                    break;                               
             }
         }
         if ($this->is_risc && $this->is_vak) return 'ВАК + РИНЦ';

@@ -54,6 +54,36 @@ fields:
         label: 'Основная информация'
         span: full
         type: section
+    addedBySpeaker:
+        label: Докладчик
+        nameFrom: surname
+        descriptionFrom: name
+        trigger:
+            action: show
+            field: publicationtype
+            condition: 'value[2]'
+        prompt: 'Нажмите на кнопку %s справа, чтобы подобрать докладчика'
+        list: $/bree7e/cris/models/author/columns.yaml
+        span: left
+        type: recordfinder
+    report_type:
+        label: Тип доклада
+        span: left
+        trigger:
+            action: show
+            field: publicationtype
+            condition: 'value[2]'
+        options:
+            '': 'Не указан'
+            'Пленарный': 'Пленарный'
+            'Секционный': 'Секционный'
+            'Стендовый': 'Стендовый'
+        placeholder: ''
+        default: ''
+        disabled: 0
+        required: 1
+        type: dropdown
+        comment: 'Выберите тип доклада'
     authors:
         label: Авторы
         span: full
@@ -248,14 +278,6 @@ fields:
             field: publicationtype
             condition: 'value[1][2]'
         type: section
-    is_wos:
-        label: 'Web of Science'
-        span: left
-        trigger:
-            action: show
-            field: publicationtype
-            condition: 'value[1][2]'
-        type: checkbox
     quartile:
         label: 'Квартиль Web of Science'
         oc.commentPosition: ''
@@ -271,6 +293,14 @@ fields:
             field: is_wos
             condition: checked
         type: radio
+    is_wos:
+        label: 'Web of Science'
+        span: left
+        trigger:
+            action: show
+            field: publicationtype
+            condition: 'value[1][2]'
+        type: checkbox
     quartile_scopus:
         label: 'Квартиль Scopus'
         oc.commentPosition: ''
@@ -294,7 +324,28 @@ fields:
             field: publicationtype
             condition: 'value[1][2]'
         type: checkbox
-    
+    quartile_wl:
+        label: 'Уровни белого списка'
+        oc.commentPosition: ''
+        options:
+            УБС1: УБС1
+            УБС2: УБС2
+            УБС3: УБС3
+            УБС4: УБС4
+        span: right 
+        trigger:
+            action: show
+            field: is_wl
+            condition: checked
+        type: radio
+    is_wl:
+        label: Белый список
+        span: left
+        trigger:
+            action: show
+            field: publicationtype
+            condition: 'value[1][2]'
+        type: checkbox
     is_risc:
         label: РИНЦ
         span: left
@@ -352,5 +403,4 @@ fields:
         span: auto
         type: switch
         comment: 'Разрешение на скачивание файла публикации'
-
 

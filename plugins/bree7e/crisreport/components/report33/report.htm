@@ -3,14 +3,14 @@
 
 {% if publications %}
 <script>
-    document.getElementById('get_docx_33').classList.remove('disabled');
-    document.getElementById('get_docx_activity').classList.remove('disabled');
-    document.getElementById('get_docx_award').classList.remove('disabled');
-    document.getElementById('get_docx_event').classList.remove('disabled');
-    document.getElementById('get_docx_grand').classList.remove('disabled');
-    document.getElementById('get_docx_involvement').classList.remove('disabled');
-    document.getElementById('get_docx_journal').classList.remove('disabled');
-    document.getElementById('get_docx_proceedings').classList.remove('disabled');
+    //document.getElementById('get_docx_33').classList.remove('disabled');
+    //document.getElementById('get_docx_activity').classList.remove('disabled');
+    //document.getElementById('get_docx_award').classList.remove('disabled');
+    //document.getElementById('get_docx_event').classList.remove('disabled');
+    //document.getElementById('get_docx_grand').classList.remove('disabled');
+    //document.getElementById('get_docx_involvement').classList.remove('disabled');
+    //document.getElementById('get_docx_journal').classList.remove('disabled');
+    //document.getElementById('get_docx_proceedings').classList.remove('disabled');
     author_id = {{ author.id }};
 </script>
 <div class="ui center aligned container">
@@ -52,7 +52,7 @@
 <p>Дата: {{ "now"|date("d.m.Y") }}</p>
 <p>Печать организации</p>
 {% else %}
-<h2 class="ui  header">Публикации не найдены</h2>
+<h2 class="ui header" style="margin-top: 1vw">Публикации не найдены</h2>
 {% endif %}
 
 

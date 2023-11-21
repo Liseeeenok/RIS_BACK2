@@ -13,6 +13,13 @@ publications:
         showSearch: true
         recordsPerPage: 10
 
+projects_author:
+    label: Проекты
+    view:
+        list: $/bree7e/cris/models/project/columns.yaml
+        toolbarButtons: add|remove
+        recordsPerPage: 10
+
 synonyms:
     label: Альтернативные имена
     view:

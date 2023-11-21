@@ -48,6 +48,12 @@ class Author extends UserModel
                 'key' => 'rb_author_id', // Ключ этой модели в таблице М-М
                 'otherKey' => 'publication_id',
             ],
+            'projects_author' => [
+                'Bree7e\Cris\Models\Project',
+                'table' => 'bree7e_cris_authors_projects', // таблица многие-ко-многим
+                'key' => 'rb_author_id', // Ключ этой модели в таблице М-М
+                'otherKey' => 'project_id',
+            ],
             'positions' => [
                 'Bree7e\Cris\Models\Position',
                 'table' => 'bree7e_cris_authors_departments_positions',
@@ -62,7 +68,6 @@ class Author extends UserModel
                 'key' => 'rb_author_id',
                 'otherKey' => 'department_id',
             ],
-    
         ]);      
         
         $this->belongsTo = array_merge($this->belongsTo, [

@@ -57,7 +57,7 @@
     </div>
     <div class="field">
         <label>Сотрудник</label>
-        <select name="author" class="ui search dropdown">
+        <select name="author" class="ui search dropdown" id="author">
             <option value="0">Все сотрудники</option>
             {% for author in __SELF__.authors %}
             <option value="{{ author.id }}">{{ author.surname }} {{ author.name }} {{ author.middlename }}</option>

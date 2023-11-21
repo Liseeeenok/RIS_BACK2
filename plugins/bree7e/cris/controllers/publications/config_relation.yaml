@@ -12,7 +12,7 @@ projects:
         recordsPerPage: 10        
 
 publication_authors:
-    label: Авторы
+    label: Авторов
     view:
         list: $/bree7e/cris/models/author/columns.yaml
         toolbarButtons: add|remove

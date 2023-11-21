@@ -54,7 +54,7 @@ class Plugin extends PluginBase
         return [
             Components\RaspilReport::class => 'crisReport', 
             Components\YearReport::class   => 'yearReport', 
-            Components\Report33::class     => 'report33'
+            Components\Report33::class     => 'report33',
         ];
     }
 

@@ -275,4 +275,5 @@
   'Backend\\Traits\\PreferenceMaker' => 'modules/backend/traits/PreferenceMaker.php',
   'Cms\\Classes\\Meta' => 'modules/cms/classes/Meta.php',
   'RainLab\\Pages\\Components\\ChildPages' => 'plugins/rainlab/pages/components/ChildPages.php',
+  'Bree7e\\Cris\\Models\\ProjectsPublications' => 'plugins/bree7e/cris/models/ProjectsPublications.php',
 );
