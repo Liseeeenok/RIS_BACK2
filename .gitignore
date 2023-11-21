@@ -1,3 +1,5 @@
 storage/framework/cache/
 storage/debugbar/
-storage/cms/cache
+storage/cms/cache/
+storage/cms/twig/
+storage/cms/combiner/assets/
