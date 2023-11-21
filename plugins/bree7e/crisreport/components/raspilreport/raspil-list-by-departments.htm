@@ -23,6 +23,10 @@
                 <th>Scopus Q3</th>
                 <th>Scopus Q4</th>
                 <th>Scopus ESCI</th>
+                <th>УБС1</th>
+                <th>УБС2</th>
+                <th>УБС3</th>
+                <th>УБС4</th>
                 <th>РИНЦ</th>
                 <th>Wos</th>
                 <th>Scopus</th>
@@ -52,6 +56,10 @@
                 <td>{{ author.artScopusQ4Total ? author.artScopusQ4Total|number_format(2, ',') }}</td> <!--Scopus Q4-->
                 <td>{{ author.artScopusQ5Total ? author.artScopusQ5Total|number_format(2, ',') }}</td>
                 <!--Scopus ESCI-->
+                <td>{{ author.artUBS1Total ? author.artUBS1Total|number_format(2, ',') }}</td> <!--УБС1-->
+                <td>{{ author.artUBS2Total ? author.artUBS2Total|number_format(2, ',') }}</td> <!--УБС2-->
+                <td>{{ author.artUBS3Total ? author.artUBS3Total|number_format(2, ',') }}</td> <!--УБС3-->
+                <td>{{ author.artUBS4Total ? author.artUBS4Total|number_format(2, ',') }}</td> <!--УБС4-->
                 <td>{{ author.artRiscTotal ? author.artRiscTotal|number_format(2, ',') }}</td> <!--РИНЦ-->
                 <td>{{ author.procWosTotal ? author.procWosTotal|number_format(2, ',') }}</td> <!--Wos-->
                 <td>{{ author.procScopusTotal ? author.procScopusTotal|number_format(2, ',') }}</td> <!--Scopus-->

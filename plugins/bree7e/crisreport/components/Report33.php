@@ -18,7 +18,8 @@ class Report33 extends ComponentBase
 
     public function onRun() 
     {
-        $this->authors = Author::ofScientificDepartments()->orderBy('surname')->get();
+        $this->authors = Author::orderBy('surname')->get();
+        //$this->authors = Author::ofScientificDepartments()->orderBy('surname')->get();
     }
   
     public function onRenderReport()
