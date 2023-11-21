@@ -1,0 +1,19 @@
+title = "Добавление публикации"
+url = "/account/publications/add"
+layout = "full-width"
+is_hidden = 0
+
+[publicationForm]
+redirect = "publications/add-second-step"
+==
+{##}
+
+<div class="ui vertical stripe segment">
+    <div class="ui text container">
+    {% component 'publicationForm' %}
+        <h4 class="ui horizontal header divider">
+            <a href="#">Case Studies</a>
+        </h4>
+
+    </div>
+</div>

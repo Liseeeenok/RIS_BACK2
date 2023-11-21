@@ -1,0 +1,37 @@
+name: Отчёты
+items:
+    -
+        title: 'Публикационная активность'
+        type: cms-page
+        code: ''
+        reference: reports/wsr
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
+    -
+        title: 'Годовые отчёты'
+        nesting: ''
+        type: cms-page
+        url: ''
+        code: ''
+        reference: reports/year
+        cmsPage: ''
+        replace: ''
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
+    -
+        title: 'Формы сотрудников'
+        nesting: ''
+        type: cms-page
+        url: ''
+        code: ''
+        reference: reports/form33
+        cmsPage: ''
+        replace: ''
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'

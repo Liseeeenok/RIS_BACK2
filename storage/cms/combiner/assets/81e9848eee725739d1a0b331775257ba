@@ -1,0 +1,28 @@
+.layout__content {
+  margin-top: 3rem;
+  margin-bottom: 3rem; }
+
+.layout__pagination {
+  margin-top: 3rem; }
+
+.secondary.pointing.menu .toc.item {
+  display: none; }
+
+@media only screen and (max-width: 700px) {
+  .secondary.pointing.menu .item,
+  .secondary.pointing.menu .menu {
+    display: none; }
+  .secondary.pointing.menu .toc.item {
+    display: block; } }
+
+.navigation .ui.menu .ui.button {
+  margin-left: 0.5em; }
+
+.footer {
+  padding: 2.5rem 0;
+  color: #999;
+  text-align: center; }
+  .footer p:last-child {
+    margin-bottom: 0; }
+
+/*# sourceMappingURL=maps/style.css.map */

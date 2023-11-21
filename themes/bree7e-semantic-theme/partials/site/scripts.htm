@@ -1,0 +1,16 @@
+[viewBag]
+
+[metrika]
+==
+{##}
+{# '@framework' - 20 kb #}
+{# '@framework.extras' - 8 kb #}
+
+<script src="{{ [
+    'assets/vendor/jquery/dist/jquery.min.js',
+    'assets/vendor/semantic/dist/semantic.min.js'
+]|theme }}"></script>
+
+{% framework extras %}
+{% scripts %}
+{% component 'metrika' %}

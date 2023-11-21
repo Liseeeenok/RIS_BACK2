@@ -1,0 +1,23 @@
+[viewBag]
+
+[webmaster]
+==
+{##}
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="author" content="Alexandr Vetrov">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+{% if this.page.meta_description %}
+  <meta name="description" content="{{ this.page.meta_description }}">
+{% endif %}
+<meta name="yandex-verification" content="ae835d9dd02d1509" />
+<title>{{ this.page.title }} / {{ this.theme.site_name }}</title>
+
+<link rel="icon" type="image/x-icon" href="{{ 'assets/images/favicon.ico'|theme }}"/>
+<link href="{{ [
+    'assets/vendor/semantic/dist/semantic.min.css',
+    'assets/css/latofonts.css',
+    'assets/css/style.css'
+]|theme }}" rel="stylesheet">
+{% styles %}
+{% component 'webmaster' %}

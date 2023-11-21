@@ -1,0 +1,30 @@
+description = "Без контейнера"
+
+[session]
+security = "all"
+==
+{##}
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    {% partial 'site/head' %}
+</head>
+<body class="pushable layout">
+    <!-- Sidebar Menu -->
+    {% partial 'site/sidebar' %}
+    <div class="pusher">
+        <div class="layout__page">
+            <nav class="layout__navigation">
+                {% partial 'site/navigation' %}
+            </nav>
+            {% page %}
+        </div>
+
+        <footer class="layout__footer">
+            {% partial 'site/footer' %}
+        </footer>    
+    </div>
+
+    {% partial 'site/scripts' %}
+</body>
+</html>

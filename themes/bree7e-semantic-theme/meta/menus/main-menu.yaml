@@ -1,0 +1,89 @@
+name: Навигация
+items:
+    -
+        title: Главная
+        nesting: ''
+        type: url
+        url: /
+        code: ''
+        reference: ''
+        cmsPage: ''
+        replace: ''
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
+    -
+        title: Поиск
+        nesting: ''
+        type: cms-page
+        url: ''
+        code: ''
+        reference: publications/search
+        cmsPage: ''
+        replace: ''
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
+    -
+        title: Статистика
+        nesting: ''
+        type: cms-page
+        url: ''
+        code: ''
+        reference: pages/statistics
+        cmsPage: ''
+        replace: ''
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
+    -
+        title: Структура
+        nesting: ''
+        type: cms-page
+        url: ''
+        code: ''
+        reference: pages/structure
+        cmsPage: ''
+        replace: ''
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
+    -
+        title: Телефоны
+        nesting: ''
+        type: cms-page
+        url: ''
+        code: ''
+        reference: pages/phones
+        cmsPage: ''
+        replace: ''
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
+    -
+        title: Проекты
+        nesting: ''
+        type: cms-page
+        url: ''
+        code: ''
+        reference: projects/project-list
+        cmsPage: ''
+        replace: ''
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
+    -
+        title: Отчеты
+        type: cms-page
+        code: ''
+        reference: reports/list
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'

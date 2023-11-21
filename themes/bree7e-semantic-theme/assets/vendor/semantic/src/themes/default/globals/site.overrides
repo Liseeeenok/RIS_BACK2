@@ -1,0 +1,5 @@
+/*******************************
+        Global Overrides
+*******************************/
+@headerFont        : 'LatoWeb', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+@pageFont          : 'LatoWeb', 'Helvetica Neue', Arial, Helvetica, sans-serif;

@@ -1,0 +1,12 @@
+title = "Авторский профиль"
+url = "/authors/:id"
+layout = "full-width"
+is_hidden = 0
+
+[authors]
+id = "{{ :id }}"
+publicationPage = "publications/publication"
+projectPage = "projects/project"
+==
+{##}
+{% component 'authors' %}

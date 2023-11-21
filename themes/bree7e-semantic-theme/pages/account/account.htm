@@ -1,0 +1,20 @@
+title = "Аккаунт"
+url = "/account/:code?"
+layout = "text-container"
+is_hidden = 0
+
+[account]
+paramCode = "code"
+forceSecure = 0
+==
+<?php
+public function onEnd()
+{
+    // $this->page->title = "Настройки аккаунта";
+}
+?>
+==
+{##}
+<div class="ui container">
+    {% component 'account' %}
+</div>

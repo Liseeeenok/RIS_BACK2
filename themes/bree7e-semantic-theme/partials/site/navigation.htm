@@ -1,0 +1,57 @@
+description = "Навигационное меню в шапке, создается из компонента Меню (Статичные страницы)"
+
+[viewBag]
+
+[staticMenu]
+code = "main-menu"
+==
+{##}
+<div class="ui inverted vertical masthead center aligned segment">
+    <div class="ui container navigation">
+        <div class="ui large secondary inverted pointing menu">
+        <a class="toc item">
+            <i class="sidebar icon"></i>
+        </a>
+        {% if staticMenu.menuItems %}
+            {% partial "staticmenu/main" items=staticMenu.menuItems %}
+        {% endif %}        
+        <div class="right item">
+            {% if user %}
+                <a href="{{ 'account/account'|page(false) }}" 
+                    class="{{ (''|page == 'account/account'|page(false)) ? 'active'}}">
+                    Мой профиль</a>
+                <a href="#"
+                    class="ui inverted button navigation__right-item" 
+                    data-request="onLogout"
+                    data-request-redirect="/">Выйти</a>
+            {% else %}
+                <a href="{{ 'account/account'|page(false) }}" class="ui inverted button navigation__right-item">Войти</a>
+            {% endif %}        
+        </div>
+        </div>
+    </div>
+</div>
+
+
+
+{% put scripts %}
+  <script>
+  $(document).ready(function() {
+      // create sidebar and attach to menu open
+      $('.ui.sidebar').sidebar('attach events', '.toc.item');
+    });
+  </script>
+{% endput %}
+
+{# <nav class="navbar navbar-dark bg-dark navbar-expand-sm">
+    <div class="container">
+        <div class="navbar-collapse collapse" id="navbarToggleContent" style="">
+        {% if staticMenu.menuItems %}
+            <ul class="navbar-nav ml-auto">
+                {% partial "staticmenu/items" items=staticMenu.menuItems %}
+            </ul>
+        {% endif %}
+        </div>    
+ 
+    </div>
+</nav> #}

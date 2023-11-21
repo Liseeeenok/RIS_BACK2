@@ -1,0 +1,65 @@
+<div class="report-widget">
+    <h3><?= e($this->property('title')) ?></h3>
+
+    <?php if (!empty($rows)): ?>
+
+    <p><?= e(trans('xeor.yandexwebmaster::lang.widgets.page_views')) ?></p>
+
+    <div
+        data-control="chart-line"
+        data-time-mode="days"
+        data-chart-options="xaxis: {mode: 'time', timeformat: '%d.%m.%y'}"
+        class="height-200"
+    >
+
+            <span
+                    data-chart="dataset"
+                    data-set-color="rgb(73, 190, 223)"
+                    data-set-data="<?= $rows['page_views'] ?>"
+                    data-set-name="Page Views"></span>
+
+    </div>
+
+    <hr/>
+
+    <p><?= e(trans('xeor.yandexwebmaster::lang.widgets.visitors')) ?></p>
+
+    <div
+            data-control="chart-line"
+            data-time-mode="days"
+            data-chart-options="xaxis: {mode: 'time', timeformat: '%d.%m.%y'}"
+            class="height-200"
+    >
+
+            <span
+                    data-chart="dataset"
+                    data-set-color="rgb(139, 197, 84)"
+                    data-set-data="<?= $rows['visitors'] ?>"
+                    data-set-name="Visitors"></span>
+
+    </div>
+
+    <hr/>
+
+    <p><?= e(trans('xeor.yandexwebmaster::lang.widgets.new_visitors')) ?></p>
+
+    <div
+            data-control="chart-line"
+            data-time-mode="days"
+            data-chart-options="xaxis: {mode: 'time', timeformat: '%d.%m.%y'}"
+            class="height-200"
+    >
+
+            <span
+                    data-chart="dataset"
+                    data-set-color="rgb(253, 204, 53)"
+                    data-set-data="<?= $rows['new_visitors'] ?>"
+                    data-set-name="New Visitors"></span>
+
+    </div>
+
+    <?php else: ?>
+    <p class="flash-message static warning"><?= e(trans('xeor.yandexwebmaster::lang.widgets.noresult')) ?></p>
+    <?php endif ?>
+
+</div>

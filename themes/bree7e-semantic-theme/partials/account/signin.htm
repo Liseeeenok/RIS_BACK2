@@ -1,0 +1,26 @@
+{##}
+<form
+    class="ui form"
+    data-request="onSignin">
+    <div class="field">
+        <label for="userSigninLogin">{{ loginAttributeLabel }}</label>
+        <input
+            name="login"
+            type="text"
+            class="form-control"
+            id="userSigninLogin"
+            placeholder="Введите ваш {{ loginAttributeLabel|lower }}" />
+    </div>
+
+    <div class="field">
+        <label for="userSigninPassword">Пароль</label>
+        <input
+            name="password"
+            type="password"
+            class="form-control"
+            id="userSigninPassword"
+            placeholder="Введите ваш пароль" />
+    </div>
+
+    <button type="submit" class="ui button">Войти</button>
+</form>

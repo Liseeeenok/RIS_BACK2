@@ -1,0 +1,13 @@
+==
+{##}
+    {% if not user %}
+        <div class="column">
+            <h3>Войти</h3>
+            {% partial 'account/signin' %}
+        </div>
+    {% else %}
+    
+        {% partial 'account/activation_check' %}
+        {% partial 'account/update' %}
+    
+    {% endif %}

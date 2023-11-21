@@ -1,0 +1,11 @@
+[viewBag]
+
+[staticMenu]
+code = "main-menu"
+==
+{##}
+<div class="ui vertical inverted sidebar menu left">
+    {% if staticMenu.menuItems %}
+        {% partial "staticmenu/main" items=staticMenu.menuItems %}
+    {% endif %}   
+</div>

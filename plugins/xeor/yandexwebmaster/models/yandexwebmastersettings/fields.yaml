@@ -1,0 +1,22 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+fields:
+    section_metrika:
+        label: xeor.yandexwebmaster::lang.settings.section_metrika
+        type: section
+    metrika:
+        label: xeor.yandexwebmaster::lang.settings.metrika
+        type: textarea
+        span: left
+        size: large
+        comment: xeor.yandexwebmaster::lang.settings.metrika_comment
+    section_webmaster:
+        label: xeor.yandexwebmaster::lang.settings.section_webmaster
+        type: section
+    webmaster:
+        label: xeor.yandexwebmaster::lang.settings.webmaster
+        type: text
+        span: left
+        comment: xeor.yandexwebmaster::lang.settings.webmaster_comment

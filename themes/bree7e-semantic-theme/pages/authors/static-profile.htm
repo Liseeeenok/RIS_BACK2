@@ -1,0 +1,196 @@
+title = "Авторский профиль (пример)"
+url = "/authors/example"
+layout = "full-width"
+is_hidden = 0
+==
+<?php
+public function onEnd()
+{
+    $this->page->title = $this->user->surname . ' ' . $this->user->name . ' ' . $this->user->middlename;
+    // dd($this); <p>User: {{ user }}</p>
+    // dd($this->user);
+    // dd($this->user->avatar);
+}
+?>
+==
+{##}
+{% put info %}
+    <div class="ui clearing vertical segment">
+        {% if user.avatar %}
+            <img class="ui rounded bordered floated image" src="{{ user.avatar.thumb(150, 200) }}">
+        {% else %}
+            <img src="assets\images\avatar\nan.jpg">
+        {% endif %}
+        <p>Кандидат технических наук</p>
+        <p>Тема кадидатской диссерации: <i>Инструментальные средства и технологии создания хранилищ данных для систем интегрированного OLAP анализа</i></p>
+        <p>Автор 8 статей</p>
+        <p><b>РИНЦ:</b> 1234656</p>
+        <p><b>Science Index:</b> 123456</p>
+        <p><b>IstinaResearcherID (IRID):</b> 51428238</p>
+        <p><b>программист</b> (с 1 ноября 2008)</p>
+        <p><b>Соавторы:</b> Хмельнов А.Е., Фереферов Е.С., Маджара Т.И., Шигаров А.О., Гаченко А.С., Дорж Т., Бычков И.В., Ружников Г.М., Федоров Р.К., Нергуй Б.</p>
+        
+    </div>
+    <div class="ui  vertical segment">
+        <p>Институт динамики систем и теории управления имени В.М. Матросова СО РАН</p>
+        <p>Отделение 4. Информационных технологий и систем</p>
+        <p>Лаборатория 4.1 "Комплексных информационных систем"</p>
+    </div>
+{% endput %}
+
+<h2 class="ui dividing header">Деятельность</h2>
+<div class="ui vertical segment">
+    <h3 class="ui  header">Публикации</h3>
+    <h4>2016</h4>
+    <div class="ui bulleted list">
+        <div class="item">
+            <div class="content">
+                <div class="header">Состояние и перспективы развития интегрированной информационно-вычислительной сети иркутского научно-образовательного комплекса
+                    <div class="ui green mini label">Статья в журнале</div>
+                </div>
+                <div class="description">
+                    <p>Маджара Т.И., Ветров А.А. <br>
+                    в журнале <i>Вестник Бурятского государственного университета. Математика, информатика</i>, издательство <i>БГУ</i> (Улан-Удэ), № 2, с. 46-54</p>
+                </div>
+            </div>
+        </div>      
+        <div class="item">
+            <div class="content">
+                <div class="header">MDAttr. Программная система для интегрированного OLAP анализа данных 
+                    <div class="ui blue mini label">Авторское свидетельство</div>
+                </div>
+                <div class="description">
+                    <p>Ветров А. А., Хмельнов А. Е. <br>
+                    Свидетельство о государственной регистрации программ для ЭВМ № 2016663523 
+                </div>
+            </div>
+        </div>      
+    </div>
+
+    <h4>2015</h4>
+    <div class="ui bulleted list">
+        <div class="item">
+            <div class="content">
+                <div class="header">Интеграция информационных систем на основе декларативных спецификаций
+                    <div class="ui green mini label">Статья в журнале</div>
+                </div>
+                <div class="description">
+                    <p>Фереферов Е.С., Гаченко А.С., Ветров А.А., Хмельнов А.Е.<br>
+                    в журнале <i>Вестник Бурятского государственного университета.</i>, издательство <i>БГУ</i> (Улан-Удэ), № 2, с. 46-54</p>
+                    
+                </div>
+            </div>
+        </div>      
+        <div class="item">
+            <div class="content">
+                <div class="header">Менеджеры компоновки пользовательского интерфейса, направляемые спецификациями
+                    <div class="ui green mini label">Статья в журнале</div>
+                </div>
+                <div class="description">
+                    <p>Фереферов Е.С., Ветров А.А.<br>
+                    в журнале <i>Вестник Бурятского государственного университета. Математика, информатика</i>, издательство <i>БГУ</i> (Улан-Удэ), № 2, с. 46-54</p>
+                    
+                </div>
+            </div>
+        </div>      
+    </div>
+
+    <h4>2010</h4>
+    <div class="ui bulleted list">
+        <div class="item">
+            <div class="content">
+                <div class="header">Развитие интернет ресурсов научной организации
+                    <div class="ui orange mini label">Труд конференции</div>
+                </div>
+                <div class="description">
+                    <p>Фёдоров Р. К., Ветров А. А. <br>
+                    в сборнике <i>Материалы конференции "Ляпуновские чтения и презентация информационных технологий"</i>, издательство <i>ИДСТУ СО РАН</i> (Иркутск), с.6</p>
+                </div>
+            </div>
+        </div>      
+    </div>
+
+</div>
+
+<div class="ui vertical segment">
+    <h3 class="ui header">Участие в проектах</h3>
+    <h4>2017</h4>
+    <div class="ui bulleted list">
+        <div class="item">
+            <div class="content">
+                <div class="header">Моделирование информационной инфраструктуры цифровой экономики Иркутской области
+                    <div class="ui red mini label">РФФИ</div>
+                </div>
+                <div class="description">
+                    <p>Руководитль: Ружников Г.М.<br>
+                    Исполнители: Ветров, Шигаров, Фереферов, Ружников, Хмельнов, Фёдоров, Шумилов</p>
+                </div>
+            </div>
+        </div>      
+        <div class="item">
+            <div class="content">
+                <div class="header">Разработка новых подходов к созданию и исследованию моделей сложных информационно-вычислительных и динамических систем с приложениями 
+                    <div class="ui blue mini label">Программа РАН</div>
+                </div>
+                <div class="description">
+                    <p>Руководитль: Ружников Г.М.<br>
+                    Исполнители: Ветров, Шигаров, Ружников, Фереферов, Парамонов</p>
+                </div>
+            </div>
+        </div>      
+    </div>    
+    <h4>2016</h4>
+    <div class="ui bulleted list">
+        <div class="item">
+            <div class="content">
+                <div class="header">Развитие методов и средств символьных вычислений в моделировании, качественном анализе и аналитическом конструировании электронно-механических систем.
+                    <div class="ui red mini label">РФФИ</div>
+                </div>
+                <div class="description">
+                    <p>Руководитль: Бычков И.В.<br>
+                    Исполнители: Бычков, Ветров, Шигаров, Фереферов, Парамонов</p>
+                </div>
+            </div>
+        </div>      
+        <div class="item">
+            <div class="content">
+                <div class="header">Разработка методов декомпиляции и анализа объектного кода Delphi
+                    <div class="ui red mini label">РФФИ</div>
+                </div>
+                <div class="description">
+                    <p>Руководитль: <i>Михайлов И.В.</i><br>
+                    Участники: Ветров, Михайлов, Парамонов</p>
+                </div>
+            </div>
+        </div>      
+        <div class="item">
+            <div class="content">
+                <div class="header">Lorem ipsum dolor sit.
+                    <div class="ui orange mini label">Интеграционная программа</div>
+                </div>
+                <div class="description">
+                   <p>Руководитль: <i>Бычков И.В.</i><br>
+                   Участники: Ветров, Шигаров, Фереферов, Парамонов</p>
+                </div>
+            </div>
+        </div>      
+    </div>    
+    <h4>2015</h4>
+    <div class="ui bulleted list">
+        <div class="item">
+            <div class="content">
+                <div class="header">Методы интеграции неструктурированных табличных данных
+                    <div class="ui red mini label">РФФИ</div>
+                </div>
+                <div class="description">
+                   <p>Руководитль: <i>Шигаров А.О.</i><br>
+                   Участники: Ветров, Шигаров, Фереферов, Парамонов</p>
+                </div>
+            </div>
+        </div>      
+    </div>          
+</div>
+
+<div class="ui vertical segment">
+    <h3 class="ui header">Руководство аспирантами</h3>
+</div>

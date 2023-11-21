@@ -1,0 +1,8 @@
+name: 'Semantic UI - ISDCT SB RAS'
+description: 'Theme based on Semantic UI'
+author: 'Alexandr Vetrov'
+homepage: ''
+code: bree7e-semantic-ui
+form: theme_fields.yaml
+require:
+    - RainLab.User
