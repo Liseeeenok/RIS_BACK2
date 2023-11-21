@@ -137,11 +137,11 @@ class PublicationSearch extends ComponentBase
         $count_publications = 0;
         $count_projects_publications = 0;
         $number_projects = [];
-        while($count_publications < (count($publications)-1)) {
+        while($count_publications < (count($publications)) && $count_projects_publications < (count($projects_publications))) {
             if($projects_publications[$count_projects_publications]->publication_id == $publications[$count_publications]->id) {
                 if($projects_publications[$count_projects_publications]->nioktr_number)
                     array_push($number_projects, $projects_publications[$count_projects_publications]->nioktr_number);
-                if(count($number_projects) > 1) 
+                if(count($number_projects) > 1)
                     $number_projects[count($number_projects)-2] .= ", ";
                 $count_projects_publications += 1;
             } elseif ($projects_publications[$count_projects_publications]->publication_id > $publications[$count_publications]->id) {
