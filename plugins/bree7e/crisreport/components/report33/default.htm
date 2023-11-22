@@ -75,7 +75,7 @@
         document.getElementById('get_docx_journal').classList.add('disabled');
         document.getElementById('get_docx_proceedings').classList.add('disabled');
     });
-    url = `https://mypew.ru:4501`;
+    url = `https://ris.icc.ru:4501`;
     document.getElementById('get_docx_activity').addEventListener('click', async (e) => {
         fromYear = $('input[name="fromYear"]').val();
         toYear = $('input[name="toYear"]').val();
@@ -138,7 +138,7 @@
             // получаем тело ответа
             let json = await response.json();
             answer = json;
-            return `https://ris.mypew.ru/docx/${answer}.docx`
+            return `https://ris.icc.ru/docx/${answer}.docx`
         } else {
             alert("Ошибка HTTP: " + response.status);
         }
